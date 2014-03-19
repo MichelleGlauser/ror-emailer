@@ -3,5 +3,6 @@ class EmailSender < ActionMailer::Base
 
     def email_message(email)
   		@email = email
-  		mail(:to => email.address, :message => "This is your message from Michelle using Ruby on Rails." )
+  		mail(:to => email.address, :message => "This is your message from Michelle using Ruby on Rails (via mailer)." )
+  	end
 end
