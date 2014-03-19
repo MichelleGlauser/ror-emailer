@@ -1,3 +1,7 @@
 class EmailSender < ActionMailer::Base
-  default from: "from@example.com"
+    default from: "michelleglauser@gmail.com"
+
+    def email_message(email)
+  		@email = email
+  		mail(:to => email.address, :message => "This is your message from Michelle using Ruby on Rails." )
 end
